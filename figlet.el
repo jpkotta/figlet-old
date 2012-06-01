@@ -58,6 +58,7 @@ in `figlet-fonts-dir-candidates'"
                     figlet-fonts-dir-candidates)))
       figlet-fonts))
 
+;;;###autoload
 (defun figlet (string)
   "Pass a string through figlet and insert the output at
 point. Use a prefix arg to be promted for a font."
@@ -81,6 +82,7 @@ point. Use a prefix arg to be promted for a font."
        (delete-trailing-whitespace)
        (buffer-substring (point-min) (point-max))))))
 
+;;;###autoload
 (defun figlet-comment (string)
   "Insert a figlet string just as `figlet' would but comment the
 result (using `comment-region')"
@@ -90,6 +92,7 @@ result (using `comment-region')"
       (figlet string)
       (comment-region start (point)))))
 
+;;;###autoload
 (defun figlet-figletify-region (start end)
   "Convert the region into a figlet string."
   (interactive "r")
@@ -97,6 +100,7 @@ result (using `comment-region')"
     (delete-region start end)
     (figlet str)))
 
+;;;###autoload
 (defun figlet-figletify-region-comment (start end)
   "Convert the region into a figlet string as with
 `figlet-figletify-region' but comment it out too."
@@ -105,6 +109,7 @@ result (using `comment-region')"
     (delete-region start end)
     (figlet-comment str)))
 
+;;;###autoload
 (defun figlet-preview-fonts (&optional text)
   "View an example of each font in a new buffer."
   (interactive)
