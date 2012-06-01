@@ -42,7 +42,7 @@
     "/usr/local/share/figlet")
   "List of directories which are to be searched for fonts.")
 (defvar figlet-options '()
-    "List of options for the figlet call.")
+  "List of options for the figlet call.")
 
 (defun figlet-get-font-list ()
   "Get a list of potential figlet fonts by testing each directory
@@ -123,3 +123,5 @@ result (using `comment-region')"
              "\n"))
 
 (provide 'figlet)
+
+;;; figlet.el ends here
